@@ -1,0 +1,31 @@
+#span1{
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 700;
+}
+#hover1{
+  color:#ffffff;
+}
+.tlp{
+  color: #000000;
+  font-size: 1.5rem;
+  position: relative;
+}
+.tlp .tooltip_text{
+  padding: 1rem 2rem;
+  visibility: hidden;
+  line-height: 1.5rem;
+  
+  font-size: 1rem;
+  width: 50rem;
+  background-color: #000000;
+  color: #000000;
+  text-align: left;
+  border-radius: 0.2rem;
+  /* Position the tooltip */
+  position: absolute;
+  left: 10%;
+  z-index: 1;
+}
+.tlp:hover .tooltip_text{
+  visibility: visible;
+}
