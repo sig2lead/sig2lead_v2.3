@@ -39,7 +39,7 @@ library(dplyr)
 library(doBy)
 #library(ComplexHeatmap)
 
-#source("http://bioconductor.org/biocLite.R")
+#source("//bioconductor.org/biocLite.R")
 
 #biocLite("ChemmineOB")
 #biocLite("ChemmineR")
@@ -206,8 +206,8 @@ shinyServer(function(input, output, session) {
             
           #   
             makeLink <- function(val) {
-               #paste("<a href='", "http://lincsportal.ccs.miami.edu/SmallMolecules/view/", val,"'>", "http://lincsportal.ccs.miami.edu/SmallMolecules/view/", val, "</a>", sep="")
-               paste("<a href='", "http://lincsportal.ccs.miami.edu/SmallMolecules/view/", val,"'>", val, "</a>", sep="")
+               #paste("<a href='", "//lincsportal.ccs.miami.edu/SmallMolecules/view/", val,"'>", "//lincsportal.ccs.miami.edu/SmallMolecules/view/", val, "</a>", sep="")
+               paste("<a href='", "//lincsportal.ccs.miami.edu/SmallMolecules/view/", val,"'>", val, "</a>", sep="")
              }
          
           # Need to tweak with LINCS fingerprints pre-loaded
@@ -303,7 +303,7 @@ shinyServer(function(input, output, session) {
           destfile <- file.path(d,uuid)
           file.rename(from=input$UploadSignature$datapath,to=destfile)
           
-          r <- POST("http://www.ilincs.org/api/SignatureMeta/uploadAndAnalyze?lib=LIB_5", body = list(file = upload_file(destfile)), timeout(30))
+          r <- POST("https://www.ilincs.org/api/SignatureMeta/uploadAndAnalyze?lib=LIB_5", body = list(file = upload_file(destfile)), timeout(30))
           
           
           print("Made it to before post call")
